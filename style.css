@@ -86,7 +86,32 @@ body {
   color: #000000;
   font-weight: bold;
   padding: 20px 30px;
+  background-color: #ffffff;
+}
+
+.button--3::before {
+  content: attr(data-name);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  clip-path: inset(100% 0 0 0);
+
+  color: #ffffff;
   background-color: #f2994a;
+
+  transition: clip-path 0.3s ease;
+}
+
+.button--3:hover::before,
+.button--3:focus::before {
+  clip-path: inset(0 0 0 0);
 }
 
 .button--4 {
