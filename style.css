@@ -48,7 +48,8 @@ body {
   transition: transform 0.5s ease, color 0.3s;
 }
 
-.button--1:hover::before {
+.button--1:hover::before,
+.button--1:focus::before {
   transform: translateX(0);
   color: #007aff;
 }
